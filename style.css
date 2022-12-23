@@ -1,0 +1,290 @@
+:root {
+
+  /*ขนาด 1920px */
+  --tab_width: 350px;
+  --tab_height: 120px;
+  --tab_left_right: 100px;
+
+
+  /* ควบคุม */
+
+  --repair:20%;
+  --oil:60%;
+
+  --Rpm1:66%;
+  --Rpm:80%;
+
+  --color_car_wheel: white;
+
+  --manu_1: brightness(0.5);
+  --manu_2: brightness(0.5);
+  --manu_3: brightness(0.5);
+  --manu_4: grayscale(100%);
+}
+
+div.body_left_right {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+
+}
+
+
+
+div.body1 {
+  position: static;
+  width: var(--tab_width);
+  height: var(--tab_height);
+}
+.grid-main3 {
+  display: grid;
+  grid-template-columns: 20% 70% 20%;
+
+}
+
+
+.progress_main1,.progress_main2{
+  width: 13px;
+  height: 70px;
+    background-color: #2a92d5;
+}
+
+
+
+div.body_left_right {
+  width: var(--tab_left_right);
+  height: var(--tab_height);
+}
+
+div.body_main {
+
+  width: 500px;
+  height: var(--tab_height);
+}
+
+
+
+.progress_main1{
+  position: relative;
+left:  62px;
+top: 18px;
+
+}
+.progress_main2{
+
+  position: relative;
+  left:  27px;
+  top: 18px;
+
+}
+
+
+@media only screen and (max-width:1920px) {
+  div.body_main {
+    position: fixed;
+    left: 35%;
+    bottom: 3%;
+  }
+}
+
+@media only screen and (min-width:1920px) {
+  div.body_main {
+    position: fixed;
+    left: 38%;
+    bottom: 3%;
+  }
+}
+
+
+body {
+  background-color: lightblue;
+}
+
+img {
+ 
+  width: 34px;
+  height: 90%;
+
+  position: relative;
+  left:  5px;
+  top: -5px;
+}
+
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 30% auto;
+  /* background-color: #2196F3;  */
+  margin: 20px;
+
+}
+
+.grid-container3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+
+
+.grid-item {
+  font-family: Monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  /* background-color: aqua; */
+  margin: 5% 0;
+  height: 70%;
+}
+
+
+
+.manu1,
+.manu2,
+.manu3,
+.manu4 {
+  width: 15px;
+  height: 15px;
+  margin: 2px;
+
+}
+
+.manu1 {
+
+  background: url(img/headlight.png);
+  background-size: contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  position: center;
+  filter: var(--manu_1);
+
+}
+
+.manu2 {
+  background: url(img/seat_belt.png);
+  background-size: contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  position: center;
+  filter: var(--manu_2);
+
+}
+
+.manu3 {
+  background: url(img/signal.png);
+  background-size: contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  position: center;
+  filter: var(--manu_3);
+}
+
+.manu4 {
+
+  background: url(img/lock.png);
+  background-size: contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  position: center;
+  filter: var(--manu_4);
+  position: relative;
+  top: 2px;
+
+  height: 18px;
+  width: 18px;
+}
+
+div.car_wheel {
+  border-radius: 20%;
+  position: relative;
+  background-color: var(--color_car_wheel);
+  width: 5px;
+  height: 12px;
+}
+
+div.circle_manu {
+  position: relative;
+  top: 5px;
+  left: 35px;
+  height: 25px;
+  width: 25px;
+  background-color: #181920;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+div.parent {
+  position: relative;
+  background: url(img/tab.png);
+  background-size: contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  
+
+}
+
+
+div.progress_left {
+ 
+  width: 13px;
+  height: var(--repair);
+  
+  background-color: #444548;
+
+}
+
+div.progress_right {
+ 
+  
+
+  width: 13px;
+  height: var(--oil);
+  background-color: #444548;
+}
+
+
+/* bottom progress */
+
+div.bottom_progress {
+  position: relative;
+  top: -10px;
+  left: -215px;
+  width: 205px;
+  height:5px;
+  background-color: #1e1f21;
+}
+
+
+div.data_bottom {
+  width: var(--Rpm);
+  height:5px;
+  background-color: #067fcd;
+   animation-duration: 0.75s;
+    animation-name: animate1;
+ 
+
+}
+
+@keyframes animate1 {
+  0% {
+    width: var(--Rpm1);
+  }
+  100% {
+    width: var(--Rpm);
+  
+  }
+} 
